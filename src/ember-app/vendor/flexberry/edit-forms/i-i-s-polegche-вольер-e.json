@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "животные",
+      "displayAttributeName": "кличка",
+      "required": true,
+      "relationName": "СоставВольера.Животные",
+      "projection": "ЖивотныеL",
+      "detailModelName": "i-i-s-polegche-состав-вольера"
+    }
+  ],
+  "external": false,
+  "caption": "Вольер",
+  "name": "IISPolegcheВольерE",
+  "className": "ВольерE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-polegche-вольер",
+      "modelProjection": "ВольерE"
+    }
+  ]
+}

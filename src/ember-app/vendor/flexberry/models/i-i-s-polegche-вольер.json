@@ -42,7 +42,68 @@
       "inverse": "вольер"
     }
   ],
-  "projections": [],
+  "projections": [
+    {
+      "name": "ВольерE",
+      "modelName": "i-i-s-polegche-вольер",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "типВольера",
+          "caption": "Тип вольера",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "площадь",
+          "caption": "Площадь",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "СоставВольераE",
+          "caption": "Состав вольера",
+          "name": "составВольера",
+          "relatedTo": "i-i-s-polegche-состав-вольера",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ВольерL",
+      "modelName": "i-i-s-polegche-вольер",
+      "attrs": [
+        {
+          "name": "номер",
+          "caption": "Номер",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "типВольера",
+          "caption": "Тип вольера",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "площадь",
+          "caption": "Площадь",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
   "stored": true,
   "offline": true,
   "external": false

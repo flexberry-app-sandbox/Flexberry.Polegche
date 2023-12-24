@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-polegche-должность-e",
+  "editForm": "i-i-s-polegche-должность-e",
+  "external": false,
+  "caption": "Должность",
+  "name": "IISPolegcheДолжностьL",
+  "className": "ДолжностьL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-polegche-должность",
+      "modelProjection": "ДолжностьL"
+    }
+  ]
+}

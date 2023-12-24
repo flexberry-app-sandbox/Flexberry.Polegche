@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-polegche-виды-e",
+  "editForm": "i-i-s-polegche-виды-e",
+  "external": false,
+  "caption": "Виды",
+  "name": "IISPolegcheВидыL",
+  "className": "ВидыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-polegche-виды",
+      "modelProjection": "ВидыL"
+    }
+  ]
+}

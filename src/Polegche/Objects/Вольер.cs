@@ -28,6 +28,16 @@ namespace IIS.Polegche
     // *** End programmer edit section *** (Вольер CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ВольерE", new string[] {
+            "Номер as \'Номер\'",
+            "ТипВольера as \'Тип вольера\'",
+            "Площадь as \'Площадь\'"})]
+    [AssociatedDetailViewAttribute("ВольерE", "СоставВольера", "СоставВольераE", true, "", "Состав вольера", true, new string[] {
+            ""})]
+    [View("ВольерL", new string[] {
+            "Номер as \'Номер\'",
+            "ТипВольера as \'Тип вольера\'",
+            "Площадь as \'Площадь\'"})]
     public class Вольер : ICSSoft.STORMNET.DataObject
     {
         
@@ -170,6 +180,35 @@ namespace IIS.Polegche
                 // *** Start programmer edit section *** (Вольер.СоставВольера Set end)
 
                 // *** End programmer edit section *** (Вольер.СоставВольера Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ВольерE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ВольерE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ВольерE", typeof(IIS.Polegche.Вольер));
+                }
+            }
+            
+            /// <summary>
+            /// "ВольерL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ВольерL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ВольерL", typeof(IIS.Polegche.Вольер));
+                }
             }
         }
     }

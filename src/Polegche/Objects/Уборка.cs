@@ -28,6 +28,22 @@ namespace IIS.Polegche
     // *** End programmer edit section *** (Уборка CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("УборкаE", new string[] {
+            "ДеньУборки as \'День уборки\'",
+            "ВремяУборки as \'Время уборки\'",
+            "Должность as \'Должность\'",
+            "Должность.Наименование as \'Наименование\'",
+            "Вольер as \'Вольер\'",
+            "Вольер.Площадь as \'Площадь\'"}, Hidden=new string[] {
+            "Должность.Наименование",
+            "Вольер.Площадь"})]
+    [MasterViewDefineAttribute("УборкаE", "Должность", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
+    [MasterViewDefineAttribute("УборкаE", "Вольер", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Площадь")]
+    [View("УборкаL", new string[] {
+            "ДеньУборки as \'День уборки\'",
+            "ВремяУборки as \'Время уборки\'",
+            "Должность.Наименование as \'Наименование\'",
+            "Вольер.Площадь as \'Площадь\'"})]
     public class Уборка : ICSSoft.STORMNET.DataObject
     {
         
@@ -172,6 +188,35 @@ namespace IIS.Polegche
                 // *** Start programmer edit section *** (Уборка.Должность Set end)
 
                 // *** End programmer edit section *** (Уборка.Должность Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "УборкаE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View УборкаE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("УборкаE", typeof(IIS.Polegche.Уборка));
+                }
+            }
+            
+            /// <summary>
+            /// "УборкаL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View УборкаL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("УборкаL", typeof(IIS.Polegche.Уборка));
+                }
             }
         }
     }

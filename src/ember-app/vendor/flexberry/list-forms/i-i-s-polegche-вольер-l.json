@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-polegche-вольер-e",
+  "editForm": "i-i-s-polegche-вольер-e",
+  "external": false,
+  "caption": "Вольер",
+  "name": "IISPolegcheВольерL",
+  "className": "ВольерL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-polegche-вольер",
+      "modelProjection": "ВольерL"
+    }
+  ]
+}

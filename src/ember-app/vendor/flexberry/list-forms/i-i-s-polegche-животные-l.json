@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-polegche-животные-e",
+  "editForm": "i-i-s-polegche-животные-e",
+  "external": false,
+  "caption": "Животные",
+  "name": "IISPolegcheЖивотныеL",
+  "className": "ЖивотныеL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-polegche-животные",
+      "modelProjection": "ЖивотныеL"
+    }
+  ]
+}

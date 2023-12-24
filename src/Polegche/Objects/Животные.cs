@@ -28,6 +28,19 @@ namespace IIS.Polegche
     // *** End programmer edit section *** (Животные CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ЖивотныеE", new string[] {
+            "КодЖивотного as \'Код животного\'",
+            "Кличка as \'Кличка\'",
+            "Пол as \'Пол\'",
+            "Виды as \'Виды\'",
+            "Виды.Наименование as \'Наименование\'"}, Hidden=new string[] {
+            "Виды.Наименование"})]
+    [MasterViewDefineAttribute("ЖивотныеE", "Виды", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
+    [View("ЖивотныеL", new string[] {
+            "КодЖивотного as \'Код животного\'",
+            "Кличка as \'Кличка\'",
+            "Пол as \'Пол\'",
+            "Виды.Наименование as \'Наименование\'"})]
     public class Животные : ICSSoft.STORMNET.DataObject
     {
         
@@ -169,6 +182,35 @@ namespace IIS.Polegche
                 // *** Start programmer edit section *** (Животные.Виды Set end)
 
                 // *** End programmer edit section *** (Животные.Виды Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ЖивотныеE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ЖивотныеE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ЖивотныеE", typeof(IIS.Polegche.Животные));
+                }
+            }
+            
+            /// <summary>
+            /// "ЖивотныеL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ЖивотныеL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ЖивотныеL", typeof(IIS.Polegche.Животные));
+                }
             }
         }
     }

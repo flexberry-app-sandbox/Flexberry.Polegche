@@ -23,7 +23,37 @@
     }
   ],
   "hasMany": [],
-  "projections": [],
+  "projections": [
+    {
+      "name": "СоставВольераE",
+      "modelName": "i-i-s-polegche-состав-вольера",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "Кличка",
+          "lookupValueField": "кличка",
+          "relationName": "Животные",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кличка",
+              "caption": "Кличка",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Животные",
+          "name": "животные",
+          "relatedTo": "i-i-s-polegche-животные",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
   "stored": true,
   "offline": true,
   "external": false

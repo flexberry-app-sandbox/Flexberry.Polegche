@@ -1,6 +1,18 @@
 import $ from 'jquery';
 import EmberFlexberryTranslations from 'ember-flexberry/locales/en/translations';
 
+import IISPolegcheВидыLForm from './forms/i-i-s-polegche-виды-l';
+import IISPolegcheВольерLForm from './forms/i-i-s-polegche-вольер-l';
+import IISPolegcheДолжностьLForm from './forms/i-i-s-polegche-должность-l';
+import IISPolegcheЖивотныеLForm from './forms/i-i-s-polegche-животные-l';
+import IISPolegcheСотрудникиLForm from './forms/i-i-s-polegche-сотрудники-l';
+import IISPolegcheУборкаLForm from './forms/i-i-s-polegche-уборка-l';
+import IISPolegcheВидыEForm from './forms/i-i-s-polegche-виды-e';
+import IISPolegcheВольерEForm from './forms/i-i-s-polegche-вольер-e';
+import IISPolegcheДолжностьEForm from './forms/i-i-s-polegche-должность-e';
+import IISPolegcheЖивотныеEForm from './forms/i-i-s-polegche-животные-e';
+import IISPolegcheСотрудникиEForm from './forms/i-i-s-polegche-сотрудники-e';
+import IISPolegcheУборкаEForm from './forms/i-i-s-polegche-уборка-e';
 import IISPolegcheВидыModel from './models/i-i-s-polegche-виды';
 import IISPolegcheВольерModel from './models/i-i-s-polegche-вольер';
 import IISPolegcheДолжностьModel from './models/i-i-s-polegche-должность';
@@ -23,7 +35,7 @@ $.extend(true, translations, {
     'i-i-s-polegche-уборка': IISPolegcheУборкаModel
   },
 
-  'application-name': '',
+  'application-name': 'Polegche',
 
   forms: {
     loading: {
@@ -62,7 +74,7 @@ $.extend(true, translations, {
       },
 
       footer: {
-        'application-name': '',
+        'application-name': 'Polegche',
         'application-version': {
           caption: 'Addon version {{version}}',
           title: 'It is version of ember-flexberry addon, which uses in this dummy application ' +
@@ -73,8 +85,8 @@ $.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: '',
-          title: ''
+          caption: 'Polegche',
+          title: 'Polegche'
         },
         'application-version': {
           caption: 'Addon version {{version}}',
@@ -86,7 +98,46 @@ $.extend(true, translations, {
           caption: 'Home',
           title: ''
         },
-
+        зоопарк: {
+          caption: 'Зоопарк',
+          title: 'Зоопарк',
+          вольеры: {
+            caption: 'Вольеры',
+            title: 'Вольеры',
+            'i-i-s-polegche-уборка-l': {
+              caption: 'Уборка',
+              title: ''
+            },
+            'i-i-s-polegche-вольер-l': {
+              caption: 'Вольер',
+              title: ''
+            }
+          },
+          штат: {
+            caption: 'Штат',
+            title: 'Штат',
+            'i-i-s-polegche-сотрудники-l': {
+              caption: 'Сотрудники',
+              title: ''
+            },
+            'i-i-s-polegche-должность-l': {
+              caption: 'Должность',
+              title: ''
+            }
+          },
+          'учет-животных': {
+            caption: 'Учет Животных',
+            title: 'Учет Животных',
+            'i-i-s-polegche-виды-l': {
+              caption: 'Виды',
+              title: ''
+            },
+            'i-i-s-polegche-животные-l': {
+              caption: 'Животные',
+              title: ''
+            }
+          }
+        }
       }
     },
 
@@ -98,7 +149,18 @@ $.extend(true, translations, {
       'delete-success-message': 'Object deleted',
       'delete-error-message-caption': 'Delete operation failed'
     },
-
+    'i-i-s-polegche-виды-l': IISPolegcheВидыLForm,
+    'i-i-s-polegche-вольер-l': IISPolegcheВольерLForm,
+    'i-i-s-polegche-должность-l': IISPolegcheДолжностьLForm,
+    'i-i-s-polegche-животные-l': IISPolegcheЖивотныеLForm,
+    'i-i-s-polegche-сотрудники-l': IISPolegcheСотрудникиLForm,
+    'i-i-s-polegche-уборка-l': IISPolegcheУборкаLForm,
+    'i-i-s-polegche-виды-e': IISPolegcheВидыEForm,
+    'i-i-s-polegche-вольер-e': IISPolegcheВольерEForm,
+    'i-i-s-polegche-должность-e': IISPolegcheДолжностьEForm,
+    'i-i-s-polegche-животные-e': IISPolegcheЖивотныеEForm,
+    'i-i-s-polegche-сотрудники-e': IISPolegcheСотрудникиEForm,
+    'i-i-s-polegche-уборка-e': IISPolegcheУборкаEForm
   },
 
 });

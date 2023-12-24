@@ -2,6 +2,7 @@ import Mixin from '@ember/object/mixin';
 import $ from 'jquery';
 import DS from 'ember-data';
 import { validator } from 'ember-cp-validations';
+import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes';
 
 export let Model = Mixin.create({
   имя: DS.attr('string'),
@@ -44,4 +45,26 @@ export let ValidationRules = {
       validator('presence', true),
     ],
   },
+};
+
+export let defineProjections = function (modelClass) {
+  modelClass.defineProjection('СотрудникиE', 'i-i-s-polegche-сотрудники', {
+    кодСотрудники: attr('Код сотрудники', { index: 0 }),
+    фамилия: attr('Фамилия', { index: 1 }),
+    имя: attr('Имя', { index: 2 }),
+    отчество: attr('Отчество', { index: 3 }),
+    должность: belongsTo('i-i-s-polegche-должность', 'Должность', {
+      наименование: attr('Наименование', { index: 5, hidden: true })
+    }, { index: 4, displayMemberPath: 'наименование' })
+  });
+
+  modelClass.defineProjection('СотрудникиL', 'i-i-s-polegche-сотрудники', {
+    кодСотрудники: attr('Код сотрудники', { index: 0 }),
+    фамилия: attr('Фамилия', { index: 1 }),
+    имя: attr('Имя', { index: 2 }),
+    отчество: attr('Отчество', { index: 3 }),
+    должность: belongsTo('i-i-s-polegche-должность', 'Наименование', {
+      наименование: attr('Наименование', { index: 4 })
+    }, { index: -1, hidden: true })
+  });
 };

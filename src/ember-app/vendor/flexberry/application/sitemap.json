@@ -1,6 +1,81 @@
 ﻿{
-  "applicationCaption": null,
-  "applicationTitle": null,
-  "items": [],
+  "applicationCaption": "Polegche",
+  "applicationTitle": "Polegche",
+  "items": [
+    {
+      "link": null,
+      "menuName": "зоопарк",
+      "caption": "Зоопарк",
+      "title": "Зоопарк",
+      "children": [
+        {
+          "link": null,
+          "menuName": "вольеры",
+          "caption": "Вольеры",
+          "title": "Вольеры",
+          "children": [
+            {
+              "link": "i-i-s-polegche-уборка-l",
+              "menuName": null,
+              "caption": "Уборка",
+              "title": "",
+              "children": null
+            },
+            {
+              "link": "i-i-s-polegche-вольер-l",
+              "menuName": null,
+              "caption": "Вольер",
+              "title": "",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "штат",
+          "caption": "Штат",
+          "title": "Штат",
+          "children": [
+            {
+              "link": "i-i-s-polegche-сотрудники-l",
+              "menuName": null,
+              "caption": "Сотрудники",
+              "title": "",
+              "children": null
+            },
+            {
+              "link": "i-i-s-polegche-должность-l",
+              "menuName": null,
+              "caption": "Должность",
+              "title": "",
+              "children": null
+            }
+          ]
+        },
+        {
+          "link": null,
+          "menuName": "учет-животных",
+          "caption": "Учет Животных",
+          "title": "Учет Животных",
+          "children": [
+            {
+              "link": "i-i-s-polegche-виды-l",
+              "menuName": null,
+              "caption": "Виды",
+              "title": "",
+              "children": null
+            },
+            {
+              "link": "i-i-s-polegche-животные-l",
+              "menuName": null,
+              "caption": "Животные",
+              "title": "",
+              "children": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "mobile": true
 }

@@ -28,6 +28,12 @@ namespace IIS.Polegche
     // *** End programmer edit section *** (Виды CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ВидыE", new string[] {
+            "Наименование as \'Наименование\'",
+            "МестоОбитания as \'Место обитания\'"})]
+    [View("ВидыL", new string[] {
+            "Наименование as \'Наименование\'",
+            "МестоОбитания as \'Место обитания\'"})]
     public class Виды : ICSSoft.STORMNET.DataObject
     {
         
@@ -101,6 +107,35 @@ namespace IIS.Polegche
                 // *** Start programmer edit section *** (Виды.Наименование Set end)
 
                 // *** End programmer edit section *** (Виды.Наименование Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ВидыE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ВидыE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ВидыE", typeof(IIS.Polegche.Виды));
+                }
+            }
+            
+            /// <summary>
+            /// "ВидыL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ВидыL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ВидыL", typeof(IIS.Polegche.Виды));
+                }
             }
         }
     }

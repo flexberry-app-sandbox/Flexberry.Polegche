@@ -27,7 +27,48 @@
   ],
   "belongsTo": [],
   "hasMany": [],
-  "projections": [],
+  "projections": [
+    {
+      "name": "ВидыE",
+      "modelName": "i-i-s-polegche-виды",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "местоОбитания",
+          "caption": "Место обитания",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ВидыL",
+      "modelName": "i-i-s-polegche-виды",
+      "attrs": [
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "местоОбитания",
+          "caption": "Место обитания",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
   "stored": true,
   "offline": true,
   "external": false

@@ -28,6 +28,12 @@ namespace IIS.Polegche
     // *** End programmer edit section *** (Должность CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("ДолжностьE", new string[] {
+            "КодДолжности as \'Код должности\'",
+            "Наименование as \'Наименование\'"})]
+    [View("ДолжностьL", new string[] {
+            "КодДолжности as \'Код должности\'",
+            "Наименование as \'Наименование\'"})]
     public class Должность : ICSSoft.STORMNET.DataObject
     {
         
@@ -100,6 +106,35 @@ namespace IIS.Polegche
                 // *** Start programmer edit section *** (Должность.Наименование Set end)
 
                 // *** End programmer edit section *** (Должность.Наименование Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "ДолжностьE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДолжностьE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДолжностьE", typeof(IIS.Polegche.Должность));
+                }
+            }
+            
+            /// <summary>
+            /// "ДолжностьL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View ДолжностьL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("ДолжностьL", typeof(IIS.Polegche.Должность));
+                }
             }
         }
     }

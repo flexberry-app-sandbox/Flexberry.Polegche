@@ -29,6 +29,11 @@ namespace IIS.Polegche
     [AutoAltered()]
     [Caption("Состав вольера")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("СоставВольераE", new string[] {
+            "Животные as \'Животные\'",
+            "Животные.Кличка as \'Кличка\'"}, Hidden=new string[] {
+            "Животные.Кличка"})]
+    [MasterViewDefineAttribute("СоставВольераE", "Животные", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Кличка")]
     public class СоставВольера : ICSSoft.STORMNET.DataObject
     {
         
@@ -107,6 +112,24 @@ namespace IIS.Polegche
                 // *** Start programmer edit section *** (СоставВольера.Вольер Set end)
 
                 // *** End programmer edit section *** (СоставВольера.Вольер Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "СоставВольераE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View СоставВольераE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("СоставВольераE", typeof(IIS.Polegche.СоставВольера));
+                }
             }
         }
     }

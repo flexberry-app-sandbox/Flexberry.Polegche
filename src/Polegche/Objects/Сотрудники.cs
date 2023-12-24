@@ -28,6 +28,21 @@ namespace IIS.Polegche
     // *** End programmer edit section *** (Сотрудники CustomAttributes)
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
+    [View("СотрудникиE", new string[] {
+            "КодСотрудники as \'Код сотрудники\'",
+            "Фамилия as \'Фамилия\'",
+            "Имя as \'Имя\'",
+            "Отчество as \'Отчество\'",
+            "Должность as \'Должность\'",
+            "Должность.Наименование as \'Наименование\'"}, Hidden=new string[] {
+            "Должность.Наименование"})]
+    [MasterViewDefineAttribute("СотрудникиE", "Должность", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Наименование")]
+    [View("СотрудникиL", new string[] {
+            "КодСотрудники as \'Код сотрудники\'",
+            "Фамилия as \'Фамилия\'",
+            "Имя as \'Имя\'",
+            "Отчество as \'Отчество\'",
+            "Должность.Наименование as \'Наименование\'"})]
     public class Сотрудники : ICSSoft.STORMNET.DataObject
     {
         
@@ -204,6 +219,35 @@ namespace IIS.Polegche
                 // *** Start programmer edit section *** (Сотрудники.Должность Set end)
 
                 // *** End programmer edit section *** (Сотрудники.Должность Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Class views container.
+        /// </summary>
+        public class Views
+        {
+            
+            /// <summary>
+            /// "СотрудникиE" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View СотрудникиE
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("СотрудникиE", typeof(IIS.Polegche.Сотрудники));
+                }
+            }
+            
+            /// <summary>
+            /// "СотрудникиL" view.
+            /// </summary>
+            public static ICSSoft.STORMNET.View СотрудникиL
+            {
+                get
+                {
+                    return ICSSoft.STORMNET.Information.GetView("СотрудникиL", typeof(IIS.Polegche.Сотрудники));
+                }
             }
         }
     }
