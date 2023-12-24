@@ -1,0 +1,30 @@
+﻿{
+  "name": "IISPolegcheСоставВольера",
+  "modelName": "i-i-s-polegche-состав-вольера",
+  "className": "СоставВольера",
+  "nameSpace": "IIS.Polegche",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "животные",
+      "relatedTo": "i-i-s-polegche-животные",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "вольер",
+      "relatedTo": "i-i-s-polegche-вольер",
+      "inverse": "составВольера"
+    }
+  ],
+  "hasMany": [],
+  "projections": [],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

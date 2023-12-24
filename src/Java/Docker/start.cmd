@@ -1,0 +1,1 @@
+docker-compose -p polegche-java up -d

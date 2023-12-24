@@ -1,0 +1,49 @@
+﻿{
+  "name": "IISPolegcheВольер",
+  "modelName": "i-i-s-polegche-вольер",
+  "className": "Вольер",
+  "nameSpace": "IIS.Polegche",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "номер",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "площадь",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "типВольера",
+      "type": "i-i-s-polegche-тип-вольера",
+      "flexberryType": "ТипВольера",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "составВольера",
+      "relatedTo": "i-i-s-polegche-состав-вольера",
+      "inverse": "вольер"
+    }
+  ],
+  "projections": [],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
